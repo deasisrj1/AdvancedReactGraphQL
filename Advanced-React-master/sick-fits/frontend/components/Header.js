@@ -59,7 +59,7 @@ const Header = () => (
     <div className="bar">
       <Logo>
         <Link href="/">
-          <a>Sick Tits</a>
+          <a>Sick Fits</a>
         </Link>
       </Logo>
       <Nav />
