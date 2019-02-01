@@ -24,7 +24,7 @@ const Pagination = props => (
             const pages = Math.ceil(count / perPage);
             const page = props.page;
             return (
-                <PaginationStyles>
+                <PaginationStyles data-test="pagination">
                     <Head>
                         <title>
                             Sick Fits! - Page {page} of {pages}
@@ -38,7 +38,11 @@ const Pagination = props => (
                     }}>
                         <a className="prev" aria-disabled={page <= 1}> ← Prev</a> 
                     </Link>
-                    <p>Page {page} of {pages} </p>
+                    <p>Page {page} of 
+                    <span className="totalPages">
+                        {pages}
+                    </span>!
+                     </p>
                     <p>{count} Items Total</p>
                     <Link 
                     prefetch
@@ -46,7 +50,7 @@ const Pagination = props => (
                         pathname: 'items',
                         query: { page: page + 1}
                     }}>
-                        <a className="prev" aria-disabled={page >= pages}> Next → </a> 
+                        <a className="next" aria-disabled={page >= pages}> Next → </a> 
                     </Link>
                  </PaginationStyles>
         )}}
@@ -54,3 +58,4 @@ const Pagination = props => (
 )
 
 export default Pagination;
+export { PAGINATION_QUERY };
