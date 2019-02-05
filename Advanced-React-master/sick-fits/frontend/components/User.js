@@ -9,6 +9,9 @@ query CURRENT_USER_QUERY{
         email
         name
         permissions
+        orders{
+            id
+        }
         cart{
             id
             quantity
