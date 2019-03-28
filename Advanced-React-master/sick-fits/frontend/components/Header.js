@@ -61,7 +61,7 @@ const Header = () => (
     <div className="bar">
       <Logo>
         <Link href="/">
-          <a>Mobamba or Sicko Mode </a>
+          <a>Title </a>
         </Link>
       </Logo>
       <Nav />

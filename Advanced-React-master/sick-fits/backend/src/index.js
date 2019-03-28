@@ -28,6 +28,8 @@ server.express.use(async(req, res, next) => {
     req.user = user;
     next();
 });
+
+// start it
 server.start(
     {
         cors: {
